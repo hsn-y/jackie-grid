@@ -1,0 +1,139 @@
+/* 
+========================================================================
+					Re-SET
+========================================================================
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+/* 
+================================================================
+					Jackie's GRID OF FIVE 
+				------------------------------
+	This Grid is only, able to divide a Row into five columns 
+================================================================
+*/
+.row {
+	display: block;
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.row::before,
+.row::after {
+	content: "";
+	display: table; /* so it works as clear fix - because columns are floated */
+	clear: both;
+}
+
+.withoutCol {
+	padding-left: 0.625%;
+	padding-right: 0.625%;
+}
+
+.col {
+	float: left;
+	/* 0.625 * 12.80 = 8px */
+	margin-top: 0.625%;
+	margin-bottom: 0.625%;
+	margin-left: 0.625%;
+	margin-right: 0.625%;
+}
+
+.col * {
+	max-width: 100%;
+	height: 50%;
+	max-height: 50%;
+}
+
+.X1 {
+	width: 18.75%;
+}
+
+.X2 {
+	width: 38.75%;
+}
+
+.X3 {
+	width: 58.75%;
+}
+
+.X4 {
+	width: 78.75%;
+}
+
+.X5 {
+	width: 98.75%;
+}
+
+.placeHolder::before {
+	content: "Jackie";
+	display: block;
+}
+
+.placeHolder {
+	display: block;
+	height: 150px;
+	background-color: burlywood;
+	color: #805f35;
+	padding-top: 60px;
+	text-align: center;
+	letter-spacing: 20px
+}
+
+.placeHolder::after {
+	content: "";
+	display: block;
+}
+
+/* 
+======================================================
+					Media Queries 
+======================================================
+*/
+
+
+/* LG: 992px - 1200px */
+@media only screen  and (max-width: 1199px) {
+	.X1-lg { width: 18.75%; }
+	.X2-lg { width: 38.75%; }
+	.X3-lg { width: 58.75%; }
+	.X4-lg { width: 78.75%; }
+	.X5-lg { width: 98.75%; }
+}
+
+/* MD: 768px - 991px */
+@media only screen and (max-width: 991px) {    
+	.X1-md { width: 18.75%; }
+	.X2-md { width: 38.75%; }
+	.X3-md { width: 58.75%; }
+	.X4-md { width: 78.75%; }
+	.X5-md { width: 98.75%; }
+}
+
+
+/* SM: 576px - 767px */
+@media only screen and (max-width: 767px) {
+	.X1-sm { width: 18.75%; }
+	.X2-sm { width: 38.75%; }
+	.X3-sm { width: 58.75%; }
+	.X4-sm { width: 78.75%; }
+	.X5-sm { width: 98.75%; }
+}
+
+/*  XS: 0 - 575px */
+@media only screen and (max-width: 575px) {
+	.X1-xs { width: 18.75%; }
+	.X2-xs { width: 38.75%; }
+	.X3-xs { width: 58.75%; }
+	.X4-xs { width: 78.75%; }
+	.X5-xs { width: 98.75%; }
+}
